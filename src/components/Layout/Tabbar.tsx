@@ -1,5 +1,3 @@
-import React from "react";
-
 const Tabbar = () => {
   return (
     <div className="layout-tabbar">
