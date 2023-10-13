@@ -1,52 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../components";
 import PlaylistItem from "../components/PlaylistItem";
 import useFetch from "../hooks/useFetch";
-
-export interface PlaylistResponseItem {
-  kind: string;
-  etag: string;
-  id: string;
-  snippet: {
-    publishedAt: string;
-    channelId: string;
-    title: string;
-    description: string;
-    thumbnails: {
-      default: {
-        url: string;
-        width: number;
-        height: number;
-      };
-      medium: {
-        url: string;
-        width: number;
-        height: number;
-      };
-      high: {
-        url: string;
-        width: number;
-        height: number;
-      };
-      standard: {
-        url: string;
-        width: number;
-        height: number;
-      };
-      maxres: {
-        url: string;
-        width: number;
-        height: number;
-      };
-    };
-    channelTitle: string;
-    localized: {
-      title: string;
-      description: string;
-    };
-  };
-}
+import { PlaylistResponseItem } from "../helper/interface";
 
 const Home = () => {
   const { data, isLoading } = useFetch(

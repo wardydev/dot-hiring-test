@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import { PlaylistResponseItem } from "./Home";
 import PlaylistItem from "../components/PlaylistItem";
+import { PlaylistResponseItem } from "../helper/interface";
 
 const Playlists = () => {
   const { data, isLoading } = useFetch(
